@@ -1,0 +1,2 @@
+module BbsPagesHelper
+end
