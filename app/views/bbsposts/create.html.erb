@@ -1,0 +1,36 @@
+<div class="container">
+	<%= form_for Bbspost.new do |f| %>
+
+  <div class="row">
+    <div class="col-sm-7" style="background-color:aliceblue;">
+	 		<%= f.label :title %>
+		</div>
+    <div class="col-sm-5" style="background-color:aliceblue;">
+		  <%= f.label :username %>
+		</div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-7" style="background-color:aliceblue;">
+	 		<%= f.text_field :title, :size=>"50" %>
+		</div>
+    <div class="col-sm-5" style="background-color:aliceblue;">
+		  <%= f.text_field :username, :size=>"25" %>
+		</div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12" style="background-color:aliceblue;">
+	 		<%= f.label :content %>
+		</div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12" style="background-color:aliceblue;">
+	 		<%= f.text_area :content, :size=>"90x8" %>
+		</div>
+  </div>
+
+  <%= f.submit "POST" %>
+	<% end %>
+</div>

@@ -1,0 +1,8 @@
+<li id="bbspost-<%= bbspost.id %>">
+  <%= bbspost.username %>
+  <span class="user"><%= link_to bbspost.username %></span>
+  <span class="content"><%= bbspost.content %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(bbspost.created_at) %> ago.
+  </span>
+</li>

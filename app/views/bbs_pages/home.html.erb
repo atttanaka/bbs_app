@@ -8,3 +8,9 @@
       <h3>
   </h2>
 </div>
+<p>
+Title:<%= @bbspost.title%></br>
+Name:<%= @bbspost.username%></br>
+Content:<%= @bbspost.content %></br>
+<%= link_to "POST", "bbsposts/create", class: "btn btn-sm btn-info btn-block" %>
+</p>
