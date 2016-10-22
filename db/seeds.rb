@@ -1,7 +1,12 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+@bbspost					= Bbspost.create
+@bbspost.title		= 'test title No.1'
+@bbspost.username	= 'Tokyo Taro'
+@bbspost.content	= 'A quick brown fox jumps over the lazy dog. '
+@bbspost.save
+
+@bbspost					= Bbspost.create
+@bbspost.title		= 'test title No.2'
+@bbspost.username	= 'Okinawa Jiro'
+@bbspost.content	= 'Mr. Jock, TV Quiz Ph.D, bags few lynx.'
+@bbspost.save
+

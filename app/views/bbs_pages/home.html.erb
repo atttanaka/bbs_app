@@ -9,8 +9,16 @@
   </h2>
 </div>
 <p>
-Title:<%= @bbspost.title%></br>
-Name:<%= @bbspost.username%></br>
-Content:<%= @bbspost.content %></br>
-<%= link_to "POST", "bbsposts/create", class: "btn btn-sm btn-info btn-block" %>
+<%= link_to "POST", "bbsposts/new", class: "btn btn-sm btn-info btn-block" %>
+<ul class="bbsposts">
+  <% @bbspost.each do |bbspost| %>
+    <li>
+      <%= bbspost.title %>
+    </li>
+      <%= bbspost.content %>
+(
+      <%= bbspost.username %>
+)
+  <% end %>
+</ul>
 </p>

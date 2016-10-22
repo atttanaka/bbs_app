@@ -4,7 +4,7 @@ class BbspostTest < ActiveSupport::TestCase
 
   def setup
     # ŽŸ‚Ìs‚ÍŠµK“I‚ÉŠÔˆá‚Á‚Ä‚¢‚é
-    @bbspost = Bbspost.new(content: "Lorem ipsum", username: "takashi")
+    @bbspost = Bbspost.new(title: "test title",content: "Lorem ipsum", username: "takashi")
   end
 
   test "should be valid" do
