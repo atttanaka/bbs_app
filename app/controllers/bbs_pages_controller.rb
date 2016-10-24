@@ -2,8 +2,9 @@
 class BbsPagesController < ApplicationController
 
   def home
+   @bbspost = Bbspost.page(params[:page])
 
-		@bbspost = Bbspost.all
+#		@bbspost = Bbspost.all
 #  	@bbspost[:title] = 'Sample Title'
 #  	@bbspost[:username] = 'Sample Name'
 #  	@bbspost[:content] = 'Test contents,no meaning.'

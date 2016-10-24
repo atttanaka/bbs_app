@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+#gem 'will_paginate-bootstrap'
 
 gem 'rails',        '4.2.2'
 gem 'bcrypt-ruby', '3.1.2'

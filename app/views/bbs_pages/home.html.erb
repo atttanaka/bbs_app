@@ -11,6 +11,9 @@
 <p>
 <%= link_to "POST", "bbsposts/new", class: "btn btn-sm btn-info btn-block" %>
 <ul class="bbsposts">
+
+<%= page_entries_info @bbspost %></br>
+<%= will_paginate @bbspost %>
   <% @bbspost.each do |bbspost| %>
     <li>
       <%= bbspost.title %>
@@ -22,5 +25,7 @@
       <%= bbspost.username %>
 )
   <% end %>
+</br>
+<%= will_paginate @bbspost %>
 </ul>
 </p>
