@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 class BbspostsController < ApplicationController
 
   include ActiveModel::ForbiddenAttributesProtection
@@ -10,8 +12,10 @@ class BbspostsController < ApplicationController
 	  @bbspost = Bbspost.new(bbspost_params)
 
     if @bbspost.save
+      flash[:success] = "投稿ありがとうございます"
 	    redirect_to root_path
     else
+      flash.now[:danger] = "いずれかのデータが空、もしくは長すぎます"
       render 'new'
     end
   end

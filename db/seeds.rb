@@ -1,16 +1,25 @@
-# coding: windows-31j
+# -*- coding: utf-8 -*-
 
-@bbspost					= Bbspost.create
-@bbspost.title		= '�g����'
-@bbspost.username	= '��������l'
-@bbspost.content	= 'POST������͂��邱�ƂŁA�����ɐV�������ɗ��񂳂�܂��B����͍ł��Â����e�ł��B'
-@bbspost.save
 
+lastname = %w[山田 中山 富井 中村 伊藤 西野条 川田 ガンビレグ 天上天下 殺意の波動に目覚めた]
+firstname = %w[太郎 次郎 花子 東京太郎 愛保 世歩玲 賢一郎 幻の銀侍 野風平蔵重親 泡姫]
+
+firstcontent = %w[今日は 今日も 昨日は 昨日も 明日は 明日も ここのところ いつものことながら 
+									いつもグチるけど さっそくだけど]
+secondcontent = %w[肉が 魚が パソコンが 電飾が お食事券が 炭酸飲料が 家庭用ゲーム機が]
+lastcontent = %w[高い 邪魔だ うざい おいしい 蹴られている 落ちていた どこかにいった ！？ ]
 99.times do |n|
-  username  = Faker::Lorem.characters(5)
-  title = Faker::Lorem.characters(10)
-  content = Faker::Lorem.sentence(5)
+  username  = lastname.sample + " " + firstname.sample
+  title = secondcontent.sample
+  content = firstcontent.sample + title + lastcontent.sample
   Bbspost.create!( username: username,
                				title: title,
                			content: content)
 end
+
+
+@bbspost					= Bbspost.create
+@bbspost.title		= '使い方'
+@bbspost.username	= '説明する人'
+@bbspost.content	= 'POSTから入力することで、ここに新しい順に羅列されます。これは100番目の投稿です。'
+@bbspost.save
